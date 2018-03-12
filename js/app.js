@@ -38,5 +38,25 @@ var seaTacAirport = {
   },
 };
 
+var seattleCenter = {
+  customersMin: 11,
+  customersMax: 38, 
+  cookiesPerCustomer: 3.7,
+  salesPerHours: function() {
+    var store3 = document.getElementById('storeFront3');
+
+    for(var i=0; i<hoursOpen.length; i++) {
+      var customersPerHour = Math.random()*(this.customersMax-this.customersMin) + this.customersMin;
+
+      var cookiesPerHour = customersPerHour*this.cookiesPerCustomer;
+
+      var salesElement = document.createElement('li');
+      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour);
+      store3.appendChild(salesElement);
+    }
+  }
+};
+
 firstAndPike.salesPerHours();
 seaTacAirport.salesPerHours();
+seattleCenter.salesPerHours();
