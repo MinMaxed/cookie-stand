@@ -24,7 +24,7 @@ var seaTacAirport = {
   customersMax: 24,
   cookiePerCustomer:1.2,
   salesPerHours: function() {
-    var Store2 = document.getElementById('storefront2');
+    var store2 = document.getElementById('storeFront2');
 
     for (var i=0; i<hoursOpen.length; i++) {
       var customersPerHour = Math.random()*(this.customersMax - this.customersMin) + this.customersMin;
@@ -33,7 +33,7 @@ var seaTacAirport = {
 
       var salesElement = document.createElement('li');
       salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour);
-      Store2.appendChild(salesElement);
+      store2.appendChild(salesElement);
     }
   },
 };
