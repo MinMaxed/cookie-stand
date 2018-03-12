@@ -13,7 +13,7 @@ var firstAndPike = {
 
       var cookiesPerHour = customersPerHour*this.cookiePerCustomer;
       var salesElement = document.createElement('li');
-      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour);
+      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour) + ' cookies sold.';
       Store1.appendChild(salesElement);
     }
   },
@@ -32,7 +32,7 @@ var seaTacAirport = {
       var cookiesPerHour = customersPerHour*this.cookiePerCustomer;
 
       var salesElement = document.createElement('li');
-      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour);
+      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour) + ' cookies sold.';
       store2.appendChild(salesElement);
     }
   },
@@ -40,7 +40,7 @@ var seaTacAirport = {
 
 var seattleCenter = {
   customersMin: 11,
-  customersMax: 38, 
+  customersMax: 38,
   cookiesPerCustomer: 3.7,
   salesPerHours: function() {
     var store3 = document.getElementById('storeFront3');
@@ -51,12 +51,33 @@ var seattleCenter = {
       var cookiesPerHour = customersPerHour*this.cookiesPerCustomer;
 
       var salesElement = document.createElement('li');
-      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour);
+      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour) + ' cookies sold.';
       store3.appendChild(salesElement);
     }
   }
 };
 
+var capitolHill = {
+  customersMin: 20,
+  customersMax: 38,
+  cookiePerCustomer: 2.3,
+  salesPerHours: function() {
+    var store4 = document.getElementById('storeFront4');
+
+    for(var i=0; i < hoursOpen.length; i++) {
+      var customersPerHour = Math.random()*(this.customersMax-this.customersMin);
+
+      var cookiesPerHour = customersPerHour*this.cookiePerCustomer;
+
+      var salesElement = document.createElement('li');
+      salesElement.textContent = hoursOpen[i] + ' ' + Math.round(cookiesPerHour) + ' cookies sold.';
+      store4.appendChild(salesElement);
+    }
+  }
+};
+
+
 firstAndPike.salesPerHours();
 seaTacAirport.salesPerHours();
 seattleCenter.salesPerHours();
+capitolHill.salesPerHours();
