@@ -20,7 +20,7 @@ var firstAndPike = {
     var total = document.createElement('li');
     total.textContent = 'total' + ' ' + Math.floor(this.totalSales) + ' cookies sold';
     store1.appendChild(total);
-  },
+  }
 };
 
 var seaTacAirport = {

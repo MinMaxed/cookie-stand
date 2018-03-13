@@ -1,0 +1,25 @@
+* {
+  font-family: Times, Arial, sans-serif;
+  background-color: lightblue;
+}
+
+header {
+ font-size: 100px;
+ font-family: 'Kalam', cursive;
+ color: purple;
+}
+
+.clickables {
+  display: inline;
+}
+
+.storeLists {
+  float:left;
+  width:20%;
+}
+
+h1 {
+  font-family: Times;
+  text-align: center;
+  color: rgb(255, 153, 0);
+}
