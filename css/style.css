@@ -13,6 +13,20 @@ header {
   display: inline;
 }
 
+
+table {
+	border: 10px solid rgb(189, 74, 174);
+	empty-cells: hide;
+}
+
+td, th {
+	padding: 10px;
+	/* border-radius: 15px; */
+  border: 1px solid black;
+  background: white;
+}
+
+
 .store-lists {
   float:left;
   width:20%;
