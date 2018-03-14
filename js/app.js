@@ -101,11 +101,16 @@ function footer() {
   storeTable.appendChild(trElement);
 }
 
+// function to calculate all store sales
+
+function salesAllStores() {
+  for(var i=0; i<allStores.length;i++) {
+    allStores[i].salesPerHour();
+  }
+}
 //function to render stores in table
 function renderAllStores() {
   for(var i = 0; i<allStores.length; i++) {
-
-    console.log(allStores[i].render);
     allStores[i].render();
   }
 }
@@ -134,28 +139,15 @@ function addNewStore(event) {
 // event listener
 storeForm.addEventListener('submit', addNewStore);
 
+//established stores
+new Store('1st and pike', 23, 65, 6.3);
+new Store('SeaTac Airport', 3, 24, 1.2);
+new Store('Seattle Center', 11, 38, 3.7);
+new Store('Capitol Hill', 20, 30, 2.3);
+new Store('Alki', 2, 16, 4.6);
 
-var firstAndPike = new Store('1st and pike', 23, 65, 6.3);
-var seaTacAirport = new Store('SeaTac Airport', 3, 24, 1.2);
-var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
-var capitolHill = new Store('Capitol Hill', 20, 30, 2.3);
-var alki = new Store('Alki', 2, 16, 4.6);
-
+//initial rendering
 header();
-
-firstAndPike.salesPerHour();
-firstAndPike.render();
-
-seaTacAirport.salesPerHour();
-seaTacAirport.render();
-
-seattleCenter.salesPerHour();
-seattleCenter.render();
-
-capitolHill.salesPerHour();
-capitolHill.render();
-
-alki.salesPerHour();
-alki.render();
-
+salesAllStores();
+renderAllStores();
 footer();
