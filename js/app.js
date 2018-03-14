@@ -1,5 +1,6 @@
 'use strict';
 
+//global variables
 var hoursOpen =  ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8am'];
 var allStores = [];
 var storeTable = document.getElementById('stores');
@@ -14,7 +15,7 @@ function header() {
   thElement.textContent = 'Store';
   trElement.appendChild(thElement);
 
-  for (var i = 0; i<hoursOpen.length; i++) {
+  for (var i = 0; i < hoursOpen.length; i++) {
     thElement = document.createElement('th');
 
     thElement.textContent = hoursOpen[i];
@@ -30,21 +31,21 @@ function header() {
 
 
 //store constructor function
-function Store(location,minCust, maxCust,AvgSale) {
+function Store(location,minCustomers, maxCustomers,AvgSale) {
 
   this.location = location;
-  this.minCust = minCust;
-  this.maxCust = maxCust;
+  this.minCustomers = minCustomers;
+  this.maxCustomers = maxCustomers;
   this.AvgSale = AvgSale;
   this.totalSales = 0;
   this.salesAtEachHour = [];
   allStores.push(this);
 }
 
-// generates numbers
+// generates numbers/sales
 Store.prototype.salesPerHour = function() {
-  for (var i=0; i<hoursOpen.length; i++) {
-    var customersPerHour = Math.random()*(this.maxCust-this.minCust) + this.minCust;
+  for (var i = 0; i < hoursOpen.length; i++) {
+    var customersPerHour = Math.random()*(this.maxCustomers-this.minCustomers);
 
     var cookiesPerHour = Math.floor(customersPerHour*this.AvgSale);
     this.salesAtEachHour.push(cookiesPerHour);
@@ -80,37 +81,36 @@ function footer() {
 
   tdElement.textContent = 'Hourly Totals';
   trElement.appendChild(tdElement);
-  var totalTotal = 0;
+  var totalSales = 0;
 
-  for (var i=0; i<hoursOpen.length;i++) {
+  for (var i = 0; i < hoursOpen.length;i++) {
     var hourlyTotal = 0;
-    for (var j=0; j<allStores.length; j++) {
+
+    for (var j = 0; j < allStores.length; j++) {
       hourlyTotal += allStores[j].salesAtEachHour[i];
-      // console.log(allStores[j]);
     }
-    // console.log(hourlyTotal);
     tdElement = document.createElement('td');
     tdElement.textContent = hourlyTotal;
     trElement.appendChild(tdElement);
-    totalTotal += hourlyTotal;
+    totalSales += hourlyTotal;
   }
   tdElement = document.createElement('td');
-  tdElement.textContent = totalTotal;
+  tdElement.textContent = totalSales;
   trElement.appendChild(tdElement);
 
   storeTable.appendChild(trElement);
 }
 
 // function to calculate all store sales
-
 function salesAllStores() {
-  for(var i=0; i<allStores.length;i++) {
+  for(var i = 0; i < allStores.length; i++) {
     allStores[i].salesPerHour();
   }
 }
+
 //function to render stores in table
 function renderAllStores() {
-  for(var i = 0; i<allStores.length; i++) {
+  for(var i = 0; i < allStores.length; i++) {
     allStores[i].render();
   }
 }
@@ -146,7 +146,7 @@ new Store('Seattle Center', 11, 38, 3.7);
 new Store('Capitol Hill', 20, 30, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
-//initial rendering
+//initial calculations and rendering
 header();
 salesAllStores();
 renderAllStores();
