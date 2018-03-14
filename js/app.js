@@ -100,6 +100,7 @@ var capitolHill = new Store('Capitol Hill', 20, 30, 2.3);
 var alki = new Store('Alki', 2, 16, 4.6);
 
 header();
+
 firstAndPike.salesPerHour();
 firstAndPike.render();
 
