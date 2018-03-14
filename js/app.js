@@ -5,10 +5,12 @@ var allStores = [];
 var storeTable = document.getElementById('stores');
 
 function header() {
+  // create thead
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
 
   thElement.textContent = 'Store';
+  // append th to tr
   trElement.appendChild(thElement);
 
   for (var i = 0; i<hoursOpen.length; i++) {
@@ -19,6 +21,8 @@ function header() {
   }
 
   thElement = document.createElement('th');
+  //append th to tr
+  //append tr to thead
   thElement.textContent = 'Total';
   trElement.appendChild(thElement);
 
