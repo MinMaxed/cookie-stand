@@ -25,7 +25,6 @@ function header() {
   storeTable.appendChild(trElement);
 }
 
-
 function Store(location,minCust, maxCust,cookiePerCust) {
 
   this.location = location;
@@ -67,6 +66,32 @@ Store.prototype.render = function () {
   storeTable.appendChild(trElement);
 };
 
+function footer() {
+  var trElement = document.createElement('tr');
+  var tdElement = document.createElement('td');
+
+  tdElement.textContent = 'Hourly Totals';
+  trElement.appendChild(tdElement);
+  var totalTotal = 0;
+
+  for (var i=0; i<hoursOpen.length;i++) {
+    var hourlyTotal = 0;
+    for (var j=0; j<allStores.length; j++) {
+      hourlyTotal += allStores[j].salesAtEachHour[i];
+      // console.log(allStores[j]);
+    }
+    console.log(hourlyTotal);
+    tdElement = document.createElement('td');
+    tdElement.textContent = hourlyTotal;
+    trElement.appendChild(tdElement);
+    totalTotal += hourlyTotal;
+  }
+  tdElement = document.createElement('td');
+  tdElement.textContent = totalTotal;
+  trElement.appendChild(tdElement);
+
+  storeTable.appendChild(trElement);
+}
 
 var firstAndPike = new Store('1st and pike', 23, 65, 6.3);
 var seaTacAirport = new Store('SeaTac Airport', 3, 24, 1.2);
@@ -90,3 +115,4 @@ capitolHill.render();
 alki.salesPerHour();
 alki.render();
 
+footer();
