@@ -103,7 +103,9 @@ function footer() {
 
 //function to render stores in table
 function renderAllStores() {
-  for(var i = 0; i<hoursOpen.length; i++) {
+  for(var i = 0; i<allStores.length; i++) {
+
+    console.log(allStores[i].render);
     allStores[i].render();
   }
 }
@@ -117,7 +119,10 @@ function addNewStore(event) {
   var newMaxCustomer = event.target.storeMaxCust.value;
   var newAvgSale = event.target.storeAvgSale.value;
 
-  new Store(newStoreLocation, newMinCustomer, newMaxCustomer, newAvgSale);
+  var newStore = new Store(newStoreLocation, newMinCustomer, newMaxCustomer, newAvgSale);
+
+  newStore.salesPerHour();
+
 
   storeTable.innerHTML = '',
   header();
@@ -128,6 +133,7 @@ function addNewStore(event) {
 
 // event listener
 storeForm.addEventListener('submit', addNewStore);
+
 
 var firstAndPike = new Store('1st and pike', 23, 65, 6.3);
 var seaTacAirport = new Store('SeaTac Airport', 3, 24, 1.2);
