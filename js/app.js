@@ -3,7 +3,10 @@
 var hoursOpen =  ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8am'];
 var allStores = [];
 var storeTable = document.getElementById('stores');
+var storeForm = document.getElementById('storeForm');
 
+
+//top row with labels for collumns
 function header() {
   var trElement = document.createElement('tr');
   var thElement = document.createElement('th');
@@ -25,27 +28,31 @@ function header() {
   storeTable.appendChild(trElement);
 }
 
-function Store(location,minCust, maxCust,cookiePerCust) {
+
+//store constructor function
+function Store(location,minCust, maxCust,AvgSale) {
 
   this.location = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
-  this.cookiePerCust = cookiePerCust;
+  this.AvgSale = AvgSale;
   this.totalSales = 0;
   this.salesAtEachHour = [];
   allStores.push(this);
 }
 
+// generates numbers
 Store.prototype.salesPerHour = function() {
   for (var i=0; i<hoursOpen.length; i++) {
     var customersPerHour = Math.random()*(this.maxCust-this.minCust) + this.minCust;
 
-    var cookiesPerHour = Math.floor(customersPerHour*this.cookiePerCust);
+    var cookiesPerHour = Math.floor(customersPerHour*this.AvgSale);
     this.salesAtEachHour.push(cookiesPerHour);
     this.totalSales += cookiesPerHour;
   }
 };
 
+//display numbers
 Store.prototype.render = function () {
   var trElement = document.createElement('tr');
   var tdElement = document.createElement('td');
@@ -66,6 +73,7 @@ Store.prototype.render = function () {
   storeTable.appendChild(trElement);
 };
 
+// footer/totals
 function footer() {
   var trElement = document.createElement('tr');
   var tdElement = document.createElement('td');
@@ -80,7 +88,7 @@ function footer() {
       hourlyTotal += allStores[j].salesAtEachHour[i];
       // console.log(allStores[j]);
     }
-    console.log(hourlyTotal);
+    // console.log(hourlyTotal);
     tdElement = document.createElement('td');
     tdElement.textContent = hourlyTotal;
     trElement.appendChild(tdElement);
@@ -92,6 +100,34 @@ function footer() {
 
   storeTable.appendChild(trElement);
 }
+
+//function to render stores in table
+function renderAllStores() {
+  for(var i = 0; i<hoursOpen.length; i++) {
+    allStores[i].render();
+  }
+}
+
+//event listener's callback function
+function addNewStore(event) {
+  event.preventDefault();
+
+  var newStoreLocation = event.target.storeLocation.value;
+  var newMinCustomer = event.target.storeMinCust.value;
+  var newMaxCustomer = event.target.storeMaxCust.value;
+  var newAvgSale = event.target.storeAvgSale.value;
+
+  new Store(newStoreLocation, newMinCustomer, newMaxCustomer, newAvgSale);
+
+  storeTable.innerHTML = '',
+  header();
+  renderAllStores();
+  footer();
+
+}
+
+// event listener
+storeForm.addEventListener('submit', addNewStore);
 
 var firstAndPike = new Store('1st and pike', 23, 65, 6.3);
 var seaTacAirport = new Store('SeaTac Airport', 3, 24, 1.2);
