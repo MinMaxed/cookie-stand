@@ -1,5 +1,5 @@
 * {
-  font-family: Times, Arial, sans-serif;
+  /* font-family: Times, Arial, sans-serif; */
   /* background-color: lightblue; */
 }
 
@@ -13,6 +13,9 @@ body.customerPage {
   background-attachment: fixed;
 }
 
+body.about {
+  background-color: salmon;
+}
 
 header {
   margin-top:15px;
@@ -64,9 +67,17 @@ table {
 	background: white;
 }
 
+nav.clickables {
+  font-family: 'Teko', sans-serif;
+  font-size: .5em;
+  display: inline;
+  text-align: center;
+  margin: 3%;
+}
+
 ul, li {
   font-family: 'Teko', sans-serif;
-  font-size: 35px;
+  font-size: 2em;
   display: inline;
   text-align: center;
   margin: 6%;
