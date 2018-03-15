@@ -1,9 +1,14 @@
 * {
   font-family: Times, Arial, sans-serif;
-  background-color: lightblue;
+  /* background-color: lightblue; */
 }
 
-
+body {
+  background-image: url("../FishCookies.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
 
 header {
@@ -24,14 +29,19 @@ img {
 h1 {
   font-family: 'Teko', sans-serif;
   font-size: 40px;
-  margin-top:5%;
+  /* margin-top:5%;
   margin-bottom:5%;
-  border:1px black;
+  margin-right: 5%; */
+  margin: 10%;
+  padding: 1%;
+  border:2px black;
+  background-color: aquamarine;
 
 }
  
 h2 {
   font-family: 'Courgette', cursive;
+  background-color: aqua;
   margin-bottom:20px;
   text-align: center;
   margin-left:40px;
