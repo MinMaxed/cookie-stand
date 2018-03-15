@@ -78,9 +78,9 @@ Store.prototype.render = function () {
 function footer() {
   var trElement = document.createElement('tr');
   var tdElement = document.createElement('td');
-
   tdElement.textContent = 'Hourly Totals';
   trElement.appendChild(tdElement);
+
   var totalSales = 0;
 
   for (var i = 0; i < hoursOpen.length;i++) {
@@ -136,7 +136,7 @@ function addNewStore(event) {
 
 }
 
-// event listener
+// event listener (form type, callback function)
 storeForm.addEventListener('submit', addNewStore);
 
 //established stores
