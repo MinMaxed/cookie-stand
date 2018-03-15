@@ -3,16 +3,44 @@
   background-color: lightblue;
 }
 
+
+
+
 header {
+  margin-top:15px;
  font-size: 100px;
  font-family: 'Kalam', cursive;
+ text-align: center;
  color: purple;
 }
 
-.clickables {
-  display: inline;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
+h1 {
+  font-family: 'Teko', sans-serif;
+  font-size: 40px;
+  margin-top:5%;
+  margin-bottom:5%;
+  border:1px black;
+
+}
+ 
+h2 {
+  font-family: 'Courgette', cursive;
+  margin-bottom:20px;
+  text-align: center;
+  margin-left:40px;
+  margin-right:40px;
+  border-width: 4px;
+  border-style:solid;
+  padding: 2%;
+  border-color:orange
+}
 
 table {
 	border: 10px solid rgb(189, 74, 174);
@@ -21,6 +49,14 @@ table {
 
  input {
 	background: white;
+}
+
+ul, li {
+  font-family: 'Teko', sans-serif;
+  font-size: 35px;
+  display: inline;
+  text-align: center;
+  margin: 6%;
 }
 
 
@@ -40,5 +76,10 @@ td, th {
 h1 {
   font-family: Times;
   text-align: center;
-  color: rgb(255, 153, 0);
+  color: rgb(250,128,114);
+}
+
+h2 {
+  font-family: cursive;
+
 }
