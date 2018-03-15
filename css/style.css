@@ -3,7 +3,10 @@
   /* background-color: lightblue; */
 }
 
-body {
+body.salesPage {
+    background-color: lightblue;
+}
+body.customerPage {
   background-image: url("../FishCookies.jpg");
   background-size: cover;
   background-repeat: no-repeat;
