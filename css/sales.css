@@ -1,0 +1,25 @@
+
+body.salesPage {
+  background-color: lightblue;
+}
+
+table {
+	border: 10px solid rgb(189, 74, 174);
+	empty-cells: hide;
+}
+
+td, th {
+	padding: 10px;
+	/* border-radius: 15px; */
+  border: 1px solid black;
+  background: white;
+}
+
+table td:hover {
+  background-color: grey;
+  text: white;
+}
+
+input {
+	background: white;
+}

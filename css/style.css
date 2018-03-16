@@ -1,8 +1,4 @@
 
-
-body.salesPage {
-    background-color: lightblue;
-}
 body.customerPage {
   background-image: url("../pictures/FishCookies.jpg");
   background-size: cover;
@@ -80,14 +76,6 @@ h3 #locationList {
   text-align:left;
 }
 
-table {
-	border: 10px solid rgb(189, 74, 174);
-	empty-cells: hide;
-}
-
- input {
-	background: white;
-}
 
 nav.clickables {
   font-family: 'Teko', sans-serif;
@@ -106,12 +94,6 @@ nav li {
 }
 
 
-td, th {
-	padding: 10px;
-	/* border-radius: 15px; */
-  border: 1px solid black;
-  background: white;
-}
 
 h1 {
   font-family: Times;
