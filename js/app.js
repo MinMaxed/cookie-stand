@@ -45,7 +45,7 @@ function Store(location,minCustomers, maxCustomers,AvgSale) {
 // generates numbers/sales
 Store.prototype.salesPerHour = function() {
   for (var i = 0; i < hoursOpen.length; i++) {
-    var customersPerHour = Math.random()*(this.maxCustomers-this.minCustomers);
+    var customersPerHour = Math.random()*(this.maxCustomers-this.minCustomers)+this.minCustomers;
 
     var cookiesPerHour = Math.floor(customersPerHour*this.AvgSale);
     this.salesAtEachHour.push(cookiesPerHour);
