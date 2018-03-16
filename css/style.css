@@ -1,7 +1,4 @@
-* {
-  /* font-family: Times, Arial, sans-serif; */
-  /* background-color: lightblue; */
-}
+
 
 body.salesPage {
     background-color: lightblue;
@@ -23,6 +20,16 @@ header {
  font-family: 'Kalam', cursive;
  text-align: center;
  color: purple;
+}
+
+body #merch {
+  width:75%;
+  margin: 0 auto;
+}
+div img{
+  display:inline;
+  width: 25%;
+  margin-left: 6%;
 }
 
 img {
@@ -48,10 +55,11 @@ h1 {
 h2 {
   font-family: 'Courgette', cursive;
   background-color: aqua;
-  margin-bottom:20px;
   text-align: center;
-  margin-left:40px;
-  margin-right:40px;
+  margin-top:.5em;
+  margin-bottom:1em;
+  margin-left:2em;
+  margin-right:2em;
   border-width: 4px;
   border-style:solid;
   padding: 2%;
@@ -69,18 +77,18 @@ table {
 
 nav.clickables {
   font-family: 'Teko', sans-serif;
-  font-size: .5em;
+  font-size: 1em;
   display: inline;
   text-align: center;
   margin: 3%;
 }
 
-ul, li {
+nav li {
   font-family: 'Teko', sans-serif;
   font-size: 2em;
   display: inline;
   text-align: center;
-  margin: 6%;
+  margin: 3%;
 }
 
 
