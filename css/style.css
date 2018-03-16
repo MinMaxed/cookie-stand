@@ -14,6 +14,13 @@ body.about {
   background-color: salmon;
 }
 
+body.merchandise {
+  background-color: orchid;
+}
+body.locations {
+  background-color: lavender;
+}
+
 header {
   margin-top:15px;
  font-size: 100px;
@@ -42,16 +49,19 @@ img {
 h1 {
   font-family: 'Teko', sans-serif;
   font-size: 40px;
+  text-align: center;
   /* margin-top:5%;
   margin-bottom:5%;
   margin-right: 5%; */
   margin: 5%;
   padding: 1%;
   border:2px black;
+  color: rgb(250,128,114);
   background-color: aquamarine;
 
 }
  
+
 h2 {
   font-family: 'Courgette', cursive;
   background-color: aqua;
@@ -64,6 +74,10 @@ h2 {
   border-style:solid;
   padding: 2%;
   border-color:orange
+}
+
+h3 #locationList {
+  text-align:left;
 }
 
 table {
@@ -107,11 +121,6 @@ td, th {
 
 h1 {
   font-family: Times;
-  text-align: center;
+  /* text-align: center; */
   color: rgb(250,128,114);
-}
-
-h2 {
-  font-family: cursive;
-
 }
