@@ -1,18 +1,25 @@
-* {
-  font-family: Times, Arial, sans-serif;
-  /* background-color: lightblue; */
-}
+
 
 body.salesPage {
     background-color: lightblue;
 }
 body.customerPage {
-  background-image: url("../FishCookies.jpg");
+  background-image: url("../pictures/FishCookies.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
+body.about {
+  background-color: salmon;
+}
+
+body.merchandise {
+  background-color: orchid;
+}
+body.locations {
+  background-color: lavender;
+}
 
 header {
   margin-top:15px;
@@ -20,6 +27,17 @@ header {
  font-family: 'Kalam', cursive;
  text-align: center;
  color: purple;
+}
+
+body #merch {
+  width:75%;
+  margin: 0 auto;
+}
+
+div img{
+  display:inline;
+  width: 25%;
+  margin-left: 6%;
 }
 
 img {
@@ -32,27 +50,34 @@ img {
 h1 {
   font-family: 'Teko', sans-serif;
   font-size: 40px;
+  text-align: center;
   /* margin-top:5%;
   margin-bottom:5%;
   margin-right: 5%; */
-  margin: 10%;
+  margin: 5%;
   padding: 1%;
   border:2px black;
+  color: rgb(250,128,114);
   background-color: aquamarine;
-
 }
  
+
 h2 {
   font-family: 'Courgette', cursive;
   background-color: aqua;
-  margin-bottom:20px;
   text-align: center;
-  margin-left:40px;
-  margin-right:40px;
+  margin-top:.5em;
+  margin-bottom:1em;
+  margin-left:2em;
+  margin-right:2em;
   border-width: 4px;
   border-style:solid;
   padding: 2%;
   border-color:orange
+}
+
+h3 #locationList {
+  text-align:left;
 }
 
 table {
@@ -64,12 +89,20 @@ table {
 	background: white;
 }
 
-ul, li {
+nav.clickables {
   font-family: 'Teko', sans-serif;
-  font-size: 35px;
+  font-size: 1em;
   display: inline;
   text-align: center;
-  margin: 6%;
+  margin: 3%;
+}
+
+nav li {
+  font-family: 'Teko', sans-serif;
+  font-size: 2em;
+  display: inline;
+  text-align: center;
+  margin: 3%;
 }
 
 
@@ -80,19 +113,8 @@ td, th {
   background: white;
 }
 
-
-.store-lists {
-  float:left;
-  width:20%;
-}
-
 h1 {
   font-family: Times;
-  text-align: center;
+  /* text-align: center; */
   color: rgb(250,128,114);
-}
-
-h2 {
-  font-family: cursive;
-
 }
