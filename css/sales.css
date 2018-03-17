@@ -32,7 +32,7 @@ table.classic {
   /* width: 80%; */
 }
 
-table.classic tr:nth-child(odd) {
+table.classic tr:nth-child(even) {
   background: grey;
 }
 
