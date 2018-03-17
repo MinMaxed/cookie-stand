@@ -151,3 +151,20 @@ header();
 salesAllStores();
 renderAllStores();
 footer();
+
+
+//table changers
+var tableType = document.getElementById('stores');
+var colorful = document.getElementById('colorful');
+var classic = document.getElementById('classic');
+var minimal = document.getElementById('minimal');
+
+colorful.addEventListener('click', changeTableClass);
+classic.addEventListener('click', changeTableClass);
+minimal.addEventListener('click', changeTableClass);
+
+function changeTableClass(event) {
+  var newClassName = event.target.id;
+  tableType.className = newClassName;
+  
+}

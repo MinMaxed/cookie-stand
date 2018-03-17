@@ -3,23 +3,71 @@ body.salesPage {
   background-color: lightblue;
 }
 
-table {
+/* base/colorful template */
+table.colorful {
 	border: 10px solid rgb(189, 74, 174);
 	empty-cells: hide;
 }
 
-td, th {
+table.colorful td, th {
 	padding: 10px;
-	/* border-radius: 15px; */
   border: 1px solid black;
   background: white;
 }
 
+table.colorful td {
+  background:lavender;
+}
+
+table.colorful td:first-child {
+  background: white;
+}
+
+/* classic template */
+table.classic {
+  border: 1px solid black;
+  background:whitesmoke;
+  empty-cells: hide;
+  font-size:18px;
+  /* width: 80%; */
+}
+
+table.classic tr:nth-child(odd) {
+  background: grey;
+}
+
+table.classic td {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+
+/* minimalistic template */
+table.minimal {
+  background: #fff;
+  width: 80%;
+}
+
+table.minimal th {
+  border-bottom: 2px solid rgb(0, 98, 128);
+}
+
+table.minimal td {
+  border-bottom: 1px solid rgb(0, 98, 128);
+border-left: 1px solid rgb(0, 98, 128);
+}
+
+table.minimal td {
+  padding: .5em .5em;
+}
+
 table td:hover {
   background-color: grey;
-  text: white;
+  color: black;
 }
+
 
 input {
 	background: white;
 }
+
