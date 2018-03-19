@@ -22,12 +22,12 @@ body.locations ul li {
   padding: .5em;
 }
 
-header {
+header { 
   margin-top:15px;
- font-size: 100px;
- font-family: 'Kalam', cursive;
- text-align: center;
- color: purple;
+  font-size: 100px;
+  font-family: 'Kalam', cursive;
+  text-align: center;
+  color: purple;
 }
 
 body #merch {
@@ -94,7 +94,6 @@ nav li {
   text-align: center;
   margin: 3%;
 }
-
 
 
 h1 {
