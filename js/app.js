@@ -29,7 +29,6 @@ function header() {
   storeTable.appendChild(trElement);
 }
 
-
 //store constructor function
 function Store(location,minCustomers, maxCustomers,AvgSale) {
 
@@ -151,3 +150,20 @@ header();
 salesAllStores();
 renderAllStores();
 footer();
+
+
+//table changers
+var tableType = document.getElementById('stores');
+var colorful = document.getElementById('colorful');
+var classic = document.getElementById('classic');
+var minimal = document.getElementById('minimal');
+
+colorful.addEventListener('click', changeTableType);
+classic.addEventListener('click', changeTableType);
+minimal.addEventListener('click', changeTableType);
+
+function changeTableType(event) {
+  var newClassType = event.target.id;
+  tableType.className = newClassType;
+  
+}

@@ -5,6 +5,12 @@ google fonts:
 <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
 
+3/17/18 Updates:
+Added table display options based on demo from class. Cleaned up indentations in html files. 
+
+3/15/18 Updates:
+Created HTML pages for the nav bars to link too. Each page contains some amount of unique info. Added CSS styling to each page as well. Not as 'pretty' as I would like, but will work on it when I get the time. 
+
 3/14/18 Updates:
 Created functions to produce all stores calculations and rendering into single functions. Added Event listeners and set up a functioning Form for adding a new store on the sales.html. Added CSS styling for the index.html, as well as some minor content for flavor. TA's helped get the functions working, had some styling tips from TAs and Jason. 
 
